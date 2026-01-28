@@ -33,7 +33,7 @@ multiple ML models for better decision making.
 # ---------------------------------
 @st.cache_data
 def train_models():
-    df = pd.read_csv("train_u6lujuX_CVtuZ9i.csv")
+    df = pd.read_csv("loan-prediction-dataset.csv")
 
     df.drop(columns=["Loan_ID"], inplace=True)
 
@@ -179,3 +179,4 @@ if st.button("🔘 Check Loan Eligibility (Stacking Model)"):
         f"Therefore, the stacking model predicts **loan "
         f"{'approval' if final_pred == 1 else 'rejection'}**."
     )
+
